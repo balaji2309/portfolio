@@ -7,7 +7,8 @@ export const ROLES = [
   "Multi-Agent Systems Designer",
   "Research-Driven Developer",
 ];
-
+export const PROFILE_PHOTO = "/profile.jpg";
+export const RESUME_URL = "/resume.pdf";
 export const SKILLS = [
   { icon: "🤖", title: "AI / ML", pills: ["PyTorch", "TensorFlow", "Transformers", "CodeBERT", "VADER / NLP", "XGBoost", "LSTM", "Random Forest", "SVM", "GBT", "Multi-Head Attention", "Gemini 1.5 Flash"] },
   { icon: "👁️", title: "Computer Vision", pills: ["OpenCV", "Deep Learning (CV)", "Facial Recognition", "Object Detection", "HSV Color Tracking", "Google Earth Engine", "Satellite Imagery"] },
