@@ -4,7 +4,6 @@ import heapq
 import requests
 from datetime import datetime, timezone
 
-# ── Dynamic Path Injection for Pre-test Middleware ───────────────────────
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 REPO_ROOT = os.path.dirname(os.path.dirname(CURRENT_DIR))
 if REPO_ROOT not in sys.path:
@@ -18,7 +17,6 @@ except ImportError:
     logging.basicConfig(level=logging.INFO)
     log = logging.getLogger("priority_inbox")
 
-# ── Config & Verified Bearer Token ────────────────────────────────────────
 TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJNYXBDbGFpbXMiOnsiYXVkIjoiaHR0cDovLzIwLjI0NC41Ni4xNDQvZXZhbHVhdGlvbi1zZXJ2aWNlIiwiZW1haWwiOiJiYWxhamkuazIwMjJiQHZpdHN0dWRlbnQuYWMuaW4iLCJleHAiOjE3Nzg5MzI3OTEsImlhdCI6MTc3ODkzMTg5MSwiaXNzIjoiQWZmb3JkIE1lZGljYWwgVGVjaG5vbG9naWVzIFByaXZhdGUgTGltaXRlZCIsImp0aSI6ImY0YmIxOGQ0LWNjYmMtNDlhMC04NTk4LTczZjMwMWU3NDhjNSIsImxvY2FsZSI6ImVuLUlOIiwibmFtZSI6ImJhbGFqaSBrIiwic3ViIjoiYTlhYmQyMWYtZTliMi00OGI4LWJjNTYtM2Y2MTIwOGMxZDhmIn0sImVtYWlsIjoiYmFsYWppLmsyMDIyYkB2aXRzdHVkZW50LmFjLmluIiwibmFtZSI6ImJhbGFqaSBrIiwicm9sbE5vIjoiMjJtaXMxMTk4IiwiYWNjZXNzQ29kZSI6IlNmRnVXZyIsImNsaWVudElEIjoiYTlhYmQyMWYtZTliMi00OGI4LWJjNTYtM2Y2MTIwOGMxZDhmIiwiY2xpZW50U2VjcmV0IjoiZ3R4dEZua1RCTnl6VHNVeiJ9.JXcLjyIkxxc7Xt3SZM6Yd3bW2F5fgqRR8H8YjD557U0"
 
 HEADERS = {
@@ -34,8 +32,6 @@ TYPE_WEIGHT = {
     "Event":     1,
 }
 
-
-# ── Scoring Algorithm ─────────────────────────────────────────────────────
 
 def compute_priority(notification: dict) -> float:
     type_weight = TYPE_WEIGHT.get(notification.get("Type"), 0)
@@ -53,8 +49,6 @@ def compute_priority(notification: dict) -> float:
     score = (type_weight * 10) + (recency_score * 10)
     return round(score, 4)
 
-
-# ── Live Min-Heap Inbox Controller ────────────────────────────────────────
 
 class PriorityInbox:
     def __init__(self, n: int):
@@ -85,8 +79,6 @@ class PriorityInbox:
         self.push(notification)
 
 
-# ── Runner Loop ───────────────────────────────────────────────────────────
-
 def main():
     log.info("=== Starting Real-time Priority Inbox Diagnostics ===")
     
@@ -116,7 +108,6 @@ def main():
         print(f"  {rank:<5} {notif.get('Type'):<12} {score:<18.4f} {notif.get('Timestamp'):<22} {notif.get('Message')}")
     print(f"{'='*75}\n")
 
-    # Simulate dynamic mutation states
     log.info("Injecting simulated real-time placement data streams...")
     new_notifications = [
         {"ID": "sim-uuid-001", "Type": "Placement", "Message": "Amazon Web Services SDE hiring", "Timestamp": "2026-05-16 17:15:00"},
