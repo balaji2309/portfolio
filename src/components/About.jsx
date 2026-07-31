@@ -5,7 +5,7 @@ export default function About() {
   const tags = ["Machine Learning", "Embedded Systems", "Computer Vision", "Full Stack", "IoT", "Multi-Agent AI", "Signal Processing", "Research"];
   
   const infoItems = [
-    ["🎓", "B.Tech, Computer Science", "VIT Chennai — Vellore Institute of Technology"],
+    ["🎓", "Integrated M.Tech, Software Engineering", "VIT Chennai — Vellore Institute of Technology"],
     ["📍", "Chennai, Tamil Nadu", "India — Open to remote & on-site roles"],
     ["🧪", "Research & Innovation", "Utility Patent · ML Publications · Hackathon Top 8"],
     ["📜", "IBM Certified", "Z Day AI & Data · Z Day Security · Build Your Own Chatbot"],
@@ -32,7 +32,7 @@ export default function About() {
           </div>
 
           <div className="space-y-4 text-slate-400 text-[.95rem] leading-relaxed">
-            <p>I'm a Computer Science student who builds systems that actually work in the real world. My work spans the full spectrum: from training neural networks to flashing firmware on microcontrollers.</p>
+            <p>I'm a Software Science student who builds systems that actually work in the real world. My work spans the full spectrum: from training neural networks to flashing firmware on microcontrollers.</p>
             <p>Deeply curious about the edge where <strong className="text-white">AI meets physical systems</strong> — building IoT devices that use ML, safety-critical embedded firmware, and multi-agent pipelines.</p>
           </div>
           <div className="flex flex-wrap gap-2 mt-6">
