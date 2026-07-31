@@ -31,7 +31,7 @@ export default function Resume() {
               <div className="font-mono text-xs tracking-widest uppercase text-cyan-400 mb-5">Education</div>
               <div className="relative pl-5 border-l border-cyan-400/20">
                 <div className="absolute -left-1.5 top-1 w-3 h-3 rounded-full bg-cyan-400" />
-                <div className="font-black text-white text-[.95rem]">B.Tech — Computer Science Engineering</div>
+                <div className="font-black text-white text-[.95rem]">Integrated M.Tech — Software Engineering</div>
                 <div className="font-mono text-xs text-cyan-400 mt-0.5">VIT Chennai</div>
                 <div className="font-mono text-xs text-slate-500 mt-0.5">2022 – 2026 (Expected)</div>
               </div>
